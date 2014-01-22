@@ -21,7 +21,7 @@ uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
 ياكى
 
 
-چۇشۇرۇپ '/wp-content/plugins/' سى ئاستىغا كۆچۇرۇڭ
+چۇشۇرۇپ '/wp-content/plugins/' نىڭ ئاستىغا كۆچۇرۇڭ
 
 == Frequently Asked Questions ==
 
