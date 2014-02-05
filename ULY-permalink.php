@@ -5,7 +5,7 @@ Plugin URI: http://www.almas.biz
 Description: بۇ قىستۇرما يازما تىمىسى، سەھىپە، خەتكۈچ قاتارلىقلارنىڭ «مۇقىم ئۇلانمىسى»،ياكى «باشقا نام»نى توشقىزمىسىڭىزمۇ ئاپتۇماتىك ھالدا ULY غا ئايلاندۇرۇپ بىرىدۇ
 Author: xirwajim<xirwajim@gmail.com>
 Version: 0.2
-Author URI: http://www.almas.biz
+Author URI: http://APP.almas.biz
 */
 
 define('ULY_PERMALINKS_VERSION', '0.2');
