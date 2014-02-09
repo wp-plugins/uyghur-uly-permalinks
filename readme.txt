@@ -2,7 +2,7 @@
 Contributors: xirwajim
 Donate link: http://almas.biz/
 Tags: ULY, Uyghur, uighur,permalink
-Requires at least: 0.2
+Requires at least: 0.3
 Tested up to: 3.3.1
 Stable tag: /trunk/
 
@@ -36,7 +36,8 @@ uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
 * بىرىنجى نەشىرى
 = 0.2 =
 * توپ ئايلاندۇرۇش ئىقتىدارى قىتىلدى . بۇرۇنقى بارلىق يازمىلارنىڭ، بەتلەرنىڭ، خەتكۈشلەرنىڭ، سەھىپىلەرنىڭ باشقا نامىنى بىراقلا ئايلاندۇرالايسىز . 
-
+= 0.3 =
+* بىر قىسىم خاتالىقلار تۇزىتىلدى
 == Upgrade Notice ==
 
 سۆز ئۇلاش بەلگىسى ۋە ئۇزۇنلۇق چەكلىمىسىنى ئۆزگەرتمەكچى بولسىڭىز تەڭشەشكە كىرىڭ.

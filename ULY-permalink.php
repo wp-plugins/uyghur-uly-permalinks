@@ -1,14 +1,14 @@
-<?php
+﻿<?php
 /*
 Plugin Name: uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
 Plugin URI: http://www.almas.biz
 Description: بۇ قىستۇرما يازما تىمىسى، سەھىپە، خەتكۈچ قاتارلىقلارنىڭ «مۇقىم ئۇلانمىسى»،ياكى «باشقا نام»نى توشقىزمىسىڭىزمۇ ئاپتۇماتىك ھالدا ULY غا ئايلاندۇرۇپ بىرىدۇ
 Author: xirwajim<xirwajim@gmail.com>
-Version: 0.2
+Version: 0.3
 Author URI: http://APP.almas.biz
 */
 
-define('ULY_PERMALINKS_VERSION', '0.2');
+define('ULY_PERMALINKS_VERSION', '0.3');
 
 register_activation_hook(__FILE__,'ULYPermalinkActive'); 
 register_deactivation_hook( __FILE__, 'ULYPermalinkDeactive' );
@@ -217,10 +217,90 @@ function getUyULYStr($text,$Space='-'){
 		{
 			return $text;
 		}
-		 $text = " ".$text;
-        $uy = array(" ئا"," ئە"," ئې"," ئى"," ئو"," ئۇ"," ئۆ"," ئۈ","ا","ە","ې","ى","و","ۇ","ۆ","ۈ","ش","ڭ","غ","چ","ب","د","ف","گ","ھ","ج","ك","ل","م","ن","پ","ق","ر","س","ت","ۋ","ي","ز","خ","ژ","،","؟","؛"," ");
-        $uly = array(" a"," e"," é"," i"," o"," u"," ö"," ü","a","e","é","i","o","u","ö","ü","sh","ng","gh","ch","b","d","f","g","h","j","k","l","m","n","p","q","r","s","t","w","y","z","x","J",",","?",";","$Space");
+		 //$text = " ".$text;
+        $uy = array(
+        "ئ",
+        "ا",
+        "ە",
+        "ې",
+        "ى",
+        "و",
+        "ۇ",
+        "ۆ",
+        "ۈ",
+        "ش",
+        "ڭ",
+        "غ",
+        "چ",
+        "ب",
+        "د",
+        "ف",
+        "گ",
+        "ھ",
+        "ج",
+        "ك",
+        "ل",
+        "م",
+        "ن",
+        "پ",
+        "ق",
+        "ر",
+        "س",
+        "ت",
+        "ۋ",
+        "ي",
+        "ز",
+        "خ",
+        "ژ",
+        "،",
+        "؟",
+		"؟",
+        "؛",
+        " "
+		);
+        
+        $uly = array(
+        "",
+        "a",
+        "e",
+        "e",
+        "i",
+        "o",
+        "u",
+        "o",
+        "u",
+        "sh",
+        "ng",
+        "gh",
+        "ch",
+        "b",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "w",
+        "y",
+        "z",
+        "x",
+        "J",
+        "",
+        "",
+        "",
+		"",
+        "$Space"
+		);
+        
         $text = str_replace($uy, $uly, $text);
-        return substr($text,1);
+        return $text;//substr($text,1);
 	}
 ?>
