@@ -1,14 +1,14 @@
-﻿<?php
+<?php
 /*
 Plugin Name: uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
 Plugin URI: http://www.almas.biz
 Description: بۇ قىستۇرما يازما تىمىسى، سەھىپە، خەتكۈچ قاتارلىقلارنىڭ «مۇقىم ئۇلانمىسى»،ياكى «باشقا نام»نى توشقىزمىسىڭىزمۇ ئاپتۇماتىك ھالدا ULY غا ئايلاندۇرۇپ بىرىدۇ
 Author: xirwajim<xirwajim@gmail.com>
-Version: 0.4
+Version: 0.5
 Author URI: http://APP.almas.biz
 */
 
-define('ULY_PERMALINKS_VERSION', '0.4');
+define('ULY_PERMALINKS_VERSION', '0.5');
 
 register_activation_hook(__FILE__,'ULYPermalinkActive'); 
 register_deactivation_hook( __FILE__, 'ULYPermalinkDeactive' );
