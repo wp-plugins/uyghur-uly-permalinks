@@ -1,8 +1,8 @@
 ﻿=== Plugin Name ===
 Contributors: xirwajim
-Donate link: http://almas.biz/
+Donate link: http://arzu.me/uyghurche_muqim_ulanmila.html
 Tags: ULY, Uyghur, uighur,permalink
-Requires at least: 0.4
+Requires at least: 0.6
 Tested up to: 3.3.1
 Stable tag: /trunk/
 
@@ -40,6 +40,11 @@ uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
 * بىر قىسىم خاتالىقلار تۇزىتىلدى
 = 0.4 =
 * بىر قىسىم خاتالىقلار تۇزىتىلدى
+= 0.5=
+* بىر قىسىم خاتالىقلار تۇزى
+= 0.6 =
+* بىر قىسىم خاتالىقلار تۇزى
+*كىيىنكى نەشىرى ئۇچۇن بىر قىسىم ئۆزگەرتىشلەر ئىلىپ بىرىلدى
 == Upgrade Notice ==
 
 سۆز ئۇلاش بەلگىسى ۋە ئۇزۇنلۇق چەكلىمىسىنى ئۆزگەرتمەكچى بولسىڭىز تەڭشەشكە كىرىڭ.

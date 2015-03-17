@@ -1,18 +1,18 @@
 <?php
 /*
 Plugin Name: uyghur ULY Permalinks (ئۇيغۇرچە مۇقىم ئۇلانمىلا)
-Plugin URI: http://www.almas.biz
+Plugin URI:http://arzu.me/uyghurche_muqim_ulanmila.html
 Description: بۇ قىستۇرما يازما تىمىسى، سەھىپە، خەتكۈچ قاتارلىقلارنىڭ «مۇقىم ئۇلانمىسى»،ياكى «باشقا نام»نى توشقىزمىسىڭىزمۇ ئاپتۇماتىك ھالدا ULY غا ئايلاندۇرۇپ بىرىدۇ
 Author: xirwajim<xirwajim@gmail.com>
-Version: 0.5
-Author URI: http://APP.almas.biz
+Version: 0.6
+Author URI: http://www.arzu.me
 */
 
-define('ULY_PERMALINKS_VERSION', '0.5');
+define('ULY_PERMALINKS_VERSION', '0.6');
 
 register_activation_hook(__FILE__,'ULYPermalinkActive'); 
 register_deactivation_hook( __FILE__, 'ULYPermalinkDeactive' );
-
+include "lib/UyghurCharUtilities.class.php";
 add_action('admin_menu', 'setULYPermalinkMenu');
 add_filter('sanitize_title', 'getULYPermalink', 1);
 
@@ -136,7 +136,8 @@ if($_POST['recover_tag_slug']){
 function getULYPermalink($strTitle) {
 	$PPS = get_option('ULYPermalink_separator', '_');
 	$PPL = get_option('ULYPermalink_length', 100);
-	$result=getUyULYStr(trim($strTitle),$PPS);
+	$uyghur=new UyghurCharUtilities();
+	$result=$uyghur->getUyULYStr(trim($strTitle),$PPS);
 	if($PPL>0) { $result=substr($result,0,$PPL); }
 	return $result;
 }
@@ -212,99 +213,4 @@ function recover_tag_slug_to_ULY(){
 	echo " <div class=\"updated\"><p>مۇۋاپپىقىيەتلىك بولدى</p></div>";
 }
 
-function getUyULYStr($text,$Space='-'){
-		if(!$text)
-		{
-			return $text;
-		}
-		 //$text = " ".$text;
-        $uy = array(
-        "ئ",
-        "ا",
-        "ە",
-        "ې",
-        "ى",
-        "و",
-        "ۇ",
-        "ۆ",
-        "ۈ",
-        "ش",
-        "ڭ",
-        "غ",
-        "چ",
-        "ب",
-        "د",
-        "ف",
-        "گ",
-        "ھ",
-        "ج",
-        "ك",
-        "ل",
-        "م",
-        "ن",
-        "پ",
-        "ق",
-        "ر",
-        "س",
-        "ت",
-        "ۋ",
-        "ي",
-        "ز",
-        "خ",
-        "ژ",
-        "،",
-        "؟",
-		"!",
-        "؛",
-		"(",
-		")",
-        " "
-		);
-        
-        $uly = array(
-        "",
-        "a",
-        "e",
-        "e",
-        "i",
-        "o",
-        "u",
-        "o",
-        "u",
-        "sh",
-        "ng",
-        "gh",
-        "ch",
-        "b",
-        "d",
-        "f",
-        "g",
-        "h",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "w",
-        "y",
-        "z",
-        "x",
-        "J",
-        "",
-        "",
-        "",
-		"",
-		"",
-		"",
-        "$Space"
-		);
-        
-        $text = str_replace($uy, $uly, $text);
-        return $text;//substr($text,1);
-	}
 ?>
